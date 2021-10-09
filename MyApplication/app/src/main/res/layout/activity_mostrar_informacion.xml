@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MostrarInformacion"
     android:orientation="vertical"
+    android:background="@color/general_background"
     >
 
 
@@ -13,8 +14,47 @@
         android:id="@+id/texto_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="owo"
+        android:text="@string/userdata"
         android:textAlignment="center"
-        android:textSize="50sp" />
+        android:textSize="40sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/boton"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/info_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texto_info"
+        android:paddingTop="25dp"
+        android:text="Nombre"
+        android:textSize="30sp"
+        android:textColor="@color/crema"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/info_apellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_nombre"
+        android:paddingTop="25dp"
+        android:text="Apellidos"
+        android:textSize="30sp"
+        android:textColor="@color/crema"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/info_numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_apellidos"
+        android:paddingTop="25dp"
+        android:text="Numero"
+        android:textSize="30sp"
+        android:textColor="@color/crema"
+        android:layout_marginStart="10dp"
+        />
+
+</RelativeLayout>

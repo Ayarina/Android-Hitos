@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="boton">#FCDADA</color>
+    <color name="general_background">#494543</color>
+    <color name="crema">#FFF6F1</color>
 </resources>

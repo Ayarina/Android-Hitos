@@ -7,15 +7,22 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MostrarInformacion extends AppCompatActivity {
-    private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_informacion);
 
-        textView = findViewById(R.id.texto_info);
+        //Datos del usuario
+        TextView nombreUsuario = findViewById(R.id.info_nombre),
+        apellidoUsuario = findViewById(R.id.info_apellidos),
+        numeroUsuario = findViewById(R.id.info_numero);
 
+        //Usuario actualizado
         Intent intent = getIntent();
-        textView.setText(intent.getStringExtra("intent_text"));
+        Usuario usuario = (Usuario) intent.getSerializableExtra("UserData");
+        nombreUsuario.setText(usuario.getNombre());
+        apellidoUsuario.setText(usuario.getApellidos());
+        numeroUsuario.setText(String.valueOf(usuario.getNumero()));
     }
 }
