@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
             android:name=".MostrarInformacion"
             android:exported="true" />
         <activity

@@ -69,12 +69,25 @@
         android:id="@+id/main_boton"
         android:layout_width="193dp"
         android:layout_height="74dp"
-        android:layout_below="@+id/main_numero"
+        android:layout_below="@+id/main_codigo"
         android:layout_centerInParent="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/boton"
         android:text="@string/boton"
         android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/main_codigo"
+        android:hint="Código de acceso"
+        android:textColorHint="@color/crema"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_numero"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingTop="20dp"
+        android:textColor="@color/crema"/>
 
 
 </RelativeLayout>
