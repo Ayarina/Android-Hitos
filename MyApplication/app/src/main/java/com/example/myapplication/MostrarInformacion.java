@@ -8,10 +8,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MostrarInformacion extends AppCompatActivity {
 
+    private TinyDB tinyDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_informacion);
+
+        tinyDB = new TinyDB(this);
 
         //Datos del usuario
         TextView nombreUsuario = findViewById(R.id.info_nombre),

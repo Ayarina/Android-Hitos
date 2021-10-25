@@ -30,7 +30,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_cabecera"
-        tools:ignore="MissingConstraints"
         android:layout_marginStart="10dp"
         android:textColor="@color/crema"
         />
@@ -40,12 +39,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_nombre"
-        android:layout_marginStart="10dp"
+        android:layout_alignLeft="@id/main_nombre"
         android:hint="Apellidos"
         android:paddingTop="25dp"
         android:textColorHint="@color/crema"
         android:textSize="30sp"
-        tools:ignore="MissingConstraints"
         android:textColor="@color/crema"
         />
 
@@ -58,8 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_apellidos"
-        tools:ignore="MissingConstraints"
-        android:layout_marginStart="10dp"
+        android:layout_alignLeft="@id/main_nombre"
         android:inputType="phone"
         android:textColor="@color/crema"
         />
@@ -88,6 +85,48 @@
         android:inputType="textPassword"
         android:paddingTop="20dp"
         android:textColor="@color/crema"/>
+
+    <TextView
+        android:id="@+id/main_lastName"
+        android:layout_below="@id/main_boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Nombre"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:textColor="@color/crema"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/main_lastSurname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_boton"
+        android:layout_toEndOf="@+id/main_lastName"
+        android:layout_marginStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Apellidos"
+        android:textAlignment="textStart"
+        android:textColor="@color/crema"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/main_lastNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_boton"
+        android:layout_toEndOf="@+id/main_lastSurname"
+        android:layout_marginStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Número"
+        android:textAlignment="textStart"
+        android:textColor="@color/crema"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>
