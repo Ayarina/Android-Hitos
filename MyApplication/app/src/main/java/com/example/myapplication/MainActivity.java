@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             Usuario lastUser = tinyDB.getObject("LastUser", Usuario.class); //Sacamos el objeto almacenado con la key "LastUser"
             lastName.setText(lastUser.getNombre());
             lastSurname.setText(lastUser.getApellidos());
-            lastNumber.setText(String.valueOf(lastUser.getNombre()));
+            lastNumber.setText(String.valueOf(lastUser.getNumero()));
         }
         catch(Exception e){
             e.printStackTrace();
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(codigoUsuario.getText().toString().equals(token)){
-                    Usuario usuario = new Usuario(nombreUsuario.getText().toString(), apellidoUsuario.getText().toString(), Integer.parseInt(numeroUsuario.getText().toString()));
+                    Usuario usuario = new Usuario(nombreUsuario.getText().toString(), apellidoUsuario.getText().toString(), numeroUsuario.getText().toString());
                     tinyDB.putObject("LastUser", usuario);
 
                     Intent intent = new Intent(MainActivity.this, Home.class); //interaction between MainActivity and MostrarInformacion
@@ -68,7 +68,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-
-/*
-* Saco de la BD la información del último usuario?
-* */

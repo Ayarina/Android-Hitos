@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable {
     private String nombre, apellidos;
-    private int numero;
+    private String numero;
 
     //Constructor
-    public Usuario(String nombre, String apellidos, int numero) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.numero = numero;
+    public Usuario(String nombre, String apellidos, String numero) {
+        this.nombre = (!nombre.trim().isEmpty()) ? nombre : "";
+        this.apellidos = (!apellidos.trim().isEmpty()) ? apellidos : "";
+        this.numero = (!nombre.trim().isEmpty()) ? numero : "";
     }
 
     //Getters & Setters
@@ -30,11 +30,11 @@ public class Usuario implements Serializable {
         this.apellidos = apellidos;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 

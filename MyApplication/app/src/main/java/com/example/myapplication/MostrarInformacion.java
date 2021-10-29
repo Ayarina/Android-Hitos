@@ -27,6 +27,6 @@ public class MostrarInformacion extends AppCompatActivity {
         Usuario usuario = (Usuario) intent.getSerializableExtra("UserData");
         nombreUsuario.setText(usuario.getNombre());
         apellidoUsuario.setText(usuario.getApellidos());
-        numeroUsuario.setText(String.valueOf(usuario.getNumero()));
+        numeroUsuario.setText(usuario.getNumero());
     }
 }

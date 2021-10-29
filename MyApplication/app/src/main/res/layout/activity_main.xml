@@ -49,17 +49,16 @@
 
     <EditText
         android:id="@+id/main_numero"
-        android:paddingTop="25dp"
-        android:hint="Número"
-        android:textColorHint="@color/crema"
-        android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_apellidos"
         android:layout_alignLeft="@id/main_nombre"
+        android:hint="Número"
         android:inputType="phone"
+        android:paddingTop="25dp"
         android:textColor="@color/crema"
-        />
+        android:textColorHint="@color/crema"
+        android:textSize="30sp" />
 
 
     <Button
