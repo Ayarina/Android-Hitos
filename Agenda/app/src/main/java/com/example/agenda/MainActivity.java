@@ -16,9 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
-    //Añadir TinyDB + dependencias
-    //Crear clase Usuario
-    //...
+    //Recycler View
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
