@@ -3,7 +3,8 @@ package com.example.agenda;
 import java.io.Serializable;
 
 public class Usuario implements Serializable {
-    private String nombre, apellidos;
+    private String nombre;
+    private String apellidos;
     private String numero;
 
     //Constructor

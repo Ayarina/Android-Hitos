@@ -3,9 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/purple_200"
+    android:background="@drawable/userdata_background"
     >
-
 
     <!-- Falta completar el layout -->
     <TextView
