@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
-    //Recycler View
+    //Recycler View -> falta completar el user_layout
     //
     @Override
     protected void onCreate(Bundle savedInstanceState) {

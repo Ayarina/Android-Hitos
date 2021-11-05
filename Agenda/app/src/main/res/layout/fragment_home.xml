@@ -20,11 +20,11 @@
         />
 
     <EditText
-        android:id="@+id/main_nombre"
+        android:id="@+id/home_nombre"
         android:paddingTop="25dp"
-        android:hint="Nombre"
+        android:hint="@string/nombre"
         android:textColorHint="@color/white"
-        android:textSize="30sp"
+        android:textSize="@dimen/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_cabecera"
@@ -33,41 +33,42 @@
         />
 
     <EditText
-        android:id="@+id/main_apellidos"
+        android:id="@+id/home_apellidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/main_nombre"
-        android:layout_alignLeft="@id/main_nombre"
-        android:hint="Apellidos"
+        android:layout_below="@id/home_nombre"
+        android:layout_alignStart="@id/home_nombre"
+        android:hint="@string/apellidos"
         android:paddingTop="25dp"
         android:textColorHint="@color/white"
-        android:textSize="30sp"
+        android:textSize="@dimen/editText"
         android:textColor="@color/white"
         />
 
     <EditText
-        android:id="@+id/main_numero"
+        android:id="@+id/home_numero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/main_apellidos"
-        android:layout_alignLeft="@id/main_nombre"
-        android:hint="Número"
+        android:layout_below="@id/home_apellidos"
+        android:layout_alignStart="@id/home_apellidos"
+        android:hint="@string/numero"
         android:inputType="phone"
         android:paddingTop="25dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="30sp" />
+        android:textSize="@dimen/editText" />
 
 
     <Button
         android:id="@+id/main_boton"
         android:layout_width="193dp"
         android:layout_height="74dp"
+        android:layout_below="@+id/home_numero"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/white"
         android:text="GUARDAR"
-        android:textSize="25sp"
+        android:textSize="@dimen/editText"
         android:textColor="@color/black"/>
 
 </RelativeLayout>
