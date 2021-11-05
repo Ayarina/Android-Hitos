@@ -3,6 +3,7 @@ package com.example.agenda;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -43,6 +44,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         //Comunicacion directa con el user_layout
         private TextView nombreUsuario, apellidosUsuario, numeroUsuario;
+        private Button boton;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,6 +52,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             nombreUsuario = itemView.findViewById(R.id.nombreUsuario);
             apellidosUsuario = itemView.findViewById(R.id.apellidosUsuario);
             numeroUsuario = itemView.findViewById(R.id.numeroUsuario);
+            boton = itemView.findViewById(R.id.botonEliminar);
         }
     }
 }

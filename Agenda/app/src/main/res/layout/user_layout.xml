@@ -10,30 +10,45 @@
     <!-- Falta completar el layout -->
     <TextView
         android:id="@+id/nombreUsuario"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:end="@+id/botonEliminar"
         android:textAlignment="center"
         android:text="@string/nombre"
         android:textSize="@dimen/textoUserLayout"
+        android:layout_centerHorizontal="true"
         />
     <TextView
         android:id="@+id/apellidosUsuario"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/nombreUsuario"
         android:text="@string/apellidos"
         android:textAlignment="center"
         android:textSize="@dimen/textoUserLayout"
+        android:layout_centerHorizontal="true"
+
         />
+
     <TextView
         android:id="@+id/numeroUsuario"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/apellidosUsuario"
         android:text="@string/numero"
         android:textAlignment="center"
         android:textSize="@dimen/textoUserLayout"
+        android:layout_centerHorizontal="true"
+        />
 
+    <Button
+        android:id="@+id/botonEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:minWidth="20dp"
+        android:layout_marginRight="20dp"
         />
 
 </RelativeLayout>
