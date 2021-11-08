@@ -43,6 +43,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         holder.nombreUsuario.setText(usuario.getNombre());
         holder.apellidosUsuario.setText(usuario.getApellidos());
         holder.numeroUsuario.setText(usuario.getNumero());
+
     }
 
     @Override
@@ -50,10 +51,20 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         return usuarios.size();
     }
 
+    /*
+    public void removeAt(int position){
+        //Notificamos al recycler
+        usuarios.remove(position);
+        notifyItemRemoved(position);
+        notifyItemChanged(position, usuarios.size());
+        notifyItemRangeChanged(position, usuarios.size());
+        tinyDB.putListObject("UsersData", usuarios);
+    }*/
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         //Comunicacion directa con el user_layout
         private TextView nombreUsuario, apellidosUsuario, numeroUsuario;
-        private Button boton;
+        private Button botonBorrar;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,7 +72,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             nombreUsuario = itemView.findViewById(R.id.nombreUsuario);
             apellidosUsuario = itemView.findViewById(R.id.apellidosUsuario);
             numeroUsuario = itemView.findViewById(R.id.numeroUsuario);
-            boton = itemView.findViewById(R.id.botonEliminar);
+            botonBorrar = itemView.findViewById(R.id.botonEliminar);
+
         }
     }
+
+
 }
