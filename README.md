@@ -8,4 +8,4 @@
 ### Hito 5 ✔
 
 ## Parte 2
-### Hito 6 En ello...
+### Hito 6 ✔
