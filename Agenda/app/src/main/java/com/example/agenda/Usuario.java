@@ -9,9 +9,9 @@ public class Usuario implements Serializable {
 
     //Constructor
     public Usuario(String nombre, String apellidos, String numero) {
-        this.nombre = (!nombre.trim().isEmpty()) ? nombre : "";
-        this.apellidos = (!apellidos.trim().isEmpty()) ? apellidos : "";
-        this.numero = (!nombre.trim().isEmpty()) ? numero : "";
+        this.nombre = (!nombre.trim().isEmpty()) ? nombre : " ";
+        this.apellidos = (!apellidos.trim().isEmpty()) ? apellidos : " ";
+        this.numero = (!nombre.trim().isEmpty()) ? numero : " ";
     }
 
     //Getters & Setters
