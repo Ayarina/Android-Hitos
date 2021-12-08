@@ -11,4 +11,4 @@
 ### Hito 6 ✔
 
 ## Parte 3
-### Hito 7 ...
+### Hito 7 ✔
