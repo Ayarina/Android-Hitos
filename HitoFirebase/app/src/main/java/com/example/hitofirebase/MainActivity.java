@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
+   /* @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Ha iniciado sesión satisfactoriamente", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }
-    }
+    } Hasta que no haya cerrar sesion... */
 
     public void signIn(String email, String password){
         mAuth.signInWithEmailAndPassword(email, password)
