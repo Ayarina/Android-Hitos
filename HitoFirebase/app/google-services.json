@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "752793536649",
+    "project_id": "hito-firebase",
+    "storage_bucket": "hito-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752793536649:android:50145a96e2346d00f4de58",
+        "android_client_info": {
+          "package_name": "com.example.hitofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752793536649-p557v5ucronrsmhrbntvtdegagiefuta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuhQJS_SjZQ3JtRmUhojPZimzAMetKYCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752793536649-p557v5ucronrsmhrbntvtdegagiefuta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
