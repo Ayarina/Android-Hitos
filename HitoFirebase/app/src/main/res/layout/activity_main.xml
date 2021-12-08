@@ -56,7 +56,7 @@
         android:textSize="20sp"
         />
     <Button
-        android:id="@+id/boton_register"
+        android:id="@+id/boton_gotoregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/boton_login"
