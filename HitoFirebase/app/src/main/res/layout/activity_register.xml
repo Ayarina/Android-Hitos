@@ -5,27 +5,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".RegisterActivity">
+
 
     <TextView
-        android:id="@+id/login_texto"
+        android:id="@+id/register_texto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="Login"
+        android:text="Register"
         android:textAlignment="center"
         android:textSize="35sp"
         android:textColor="@color/black"
         />
 
     <EditText
-        android:id="@+id/correo_login"
+        android:id="@+id/correo_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login_texto"
+        android:layout_below="@id/register_texto"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:hint="Correo"
@@ -34,38 +34,37 @@
         />
 
     <EditText
-        android:id="@+id/contraseña_login"
+        android:id="@+id/contraseña_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/correo_login"
-        android:layout_alignStart="@id/correo_login"
-        android:layout_alignEnd="@id/correo_login"
+        android:layout_below="@id/correo_register"
+        android:layout_alignStart="@id/correo_register"
+        android:layout_alignEnd="@id/correo_register"
+        android:hint="Contraseña"
+        android:paddingTop="25dp"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:id="@+id/contraseña_register_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contraseña_register"
+        android:layout_alignStart="@id/contraseña_register"
+        android:layout_alignEnd="@id/contraseña_register"
         android:hint="Contraseña"
         android:paddingTop="25dp"
         android:textSize="20sp"
         />
 
     <Button
-        android:id="@+id/boton_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/contraseña_login"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="15dp"
-        android:text="Log in"
-        android:textSize="20sp"
-        />
-    <Button
         android:id="@+id/boton_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/boton_login"
+        android:layout_below="@+id/contraseña_register_check"
         android:layout_centerInParent="true"
         android:layout_marginTop="15dp"
         android:text="Register"
-        android:textSize="15sp"
+        android:textSize="20sp"
         />
-
-
 
 </RelativeLayout>
