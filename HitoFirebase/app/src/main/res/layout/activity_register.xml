@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".activities.RegisterActivity">
 
 
     <TextView
@@ -22,10 +22,21 @@
         />
 
     <EditText
-        android:id="@+id/correo_register"
+        android:id="@+id/username_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/register_texto"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Nombre de Usuario"
+        android:paddingTop="25dp"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:id="@+id/correo_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username_register"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:hint="Correo"

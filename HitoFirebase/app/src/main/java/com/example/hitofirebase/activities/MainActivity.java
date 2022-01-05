@@ -1,4 +1,4 @@
-package com.example.hitofirebase;
+package com.example.hitofirebase.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,19 +11,33 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.hitofirebase.R;
+import com.example.hitofirebase.models.User;
+import com.example.hitofirebase.persistence.ReadAndWriteSnippets;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static User currentUser;
     private static final String TAG = "EmailPassword";
     private FirebaseAuth mAuth;
 
+    private ReadAndWriteSnippets database;
+
     private Button botonLogin, botonRegister;
     private EditText correo, contraseña;
+    private String username;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        // Inicializamos la referencia
+        database = new ReadAndWriteSnippets();
 
         correo = findViewById(R.id.correo_login);
         contraseña = findViewById(R.id.contraseña_login);
@@ -75,8 +91,12 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+
+                            currentUser = new User(user.getUid(), database.getUsername(user.getUid()), email);
+
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            Toast.makeText(MainActivity.this, "Ha iniciado sesión satisfactoriamente", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Bienvenido" + currentUser.getUsername() +
+                                    "/" + currentUser.getCorreo(), Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.

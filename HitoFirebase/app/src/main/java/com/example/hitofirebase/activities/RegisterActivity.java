@@ -1,4 +1,4 @@
-package com.example.hitofirebase;
+package com.example.hitofirebase.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.hitofirebase.R;
+import com.example.hitofirebase.persistence.ReadAndWriteSnippets;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,16 +24,22 @@ public class RegisterActivity extends AppCompatActivity {
     private static final String TAG = "EmailPassword";
     private FirebaseAuth mAuth;
     private Button botonRegister;
-    private EditText correo, contraseña, contraseñaCheck;
+    private EditText username, correo, contraseña, contraseñaCheck;
+    private ReadAndWriteSnippets database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // Initialize Firebase DataBase
+        database = new ReadAndWriteSnippets();
+
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
+        //Bindeamos los elementos de la UI
+        username = findViewById(R.id.username_register);
         correo = findViewById(R.id.correo_register);
         contraseña = findViewById(R.id.contraseña_register);
         contraseñaCheck = findViewById(R.id.contraseña_register_check);
@@ -57,9 +65,14 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
+
                             FirebaseUser user = mAuth.getCurrentUser();
+                            database.writeNewUserWithTaskListeners(user.getUid(), username.getText().toString(), email);
+
+                            Toast.makeText(RegisterActivity.this, "Se ha registrado " + username.getText().toString()
+                                    + " satisfactoriamente", Toast.LENGTH_SHORT).show();
+
                             Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
-                            Toast.makeText(RegisterActivity.this, "Se ha registrado satisfactoriamente", Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
