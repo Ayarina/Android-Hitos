@@ -92,11 +92,10 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
 
-                            currentUser = new User(user.getUid(), database.getUsername(user.getUid()), email);
+                            //currentUser = new User(user.getUid(), database.getUsername(user.getUid()), email);
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            Toast.makeText(MainActivity.this, "Bienvenido" + currentUser.getUsername() +
-                                    "/" + currentUser.getCorreo(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Bienvenido a la aplicación", Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.

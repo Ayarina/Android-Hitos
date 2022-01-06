@@ -33,4 +33,12 @@ public class User {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 }

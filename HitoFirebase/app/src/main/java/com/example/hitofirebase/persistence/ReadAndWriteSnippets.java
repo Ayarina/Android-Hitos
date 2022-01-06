@@ -9,8 +9,11 @@ import androidx.annotation.NonNull;
 import com.example.hitofirebase.models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ReadAndWriteSnippets {
 
@@ -31,6 +34,10 @@ public class ReadAndWriteSnippets {
         User user = new User(userId, name, email);
 
         mDatabase.child("users").child(userId).setValue(user);
+    }
+
+    public DatabaseReference getmDatabase() {
+        return mDatabase;
     }
 
     public void writeNewUserWithTaskListeners(String userId, String name, String email) {
@@ -55,4 +62,7 @@ public class ReadAndWriteSnippets {
         // [END rtdb_write_new_user_task]
     }
 
+    public DatabaseReference getUsersReference(String uid){
+        return mDatabase.child("users").child(uid);
+    }
 }
